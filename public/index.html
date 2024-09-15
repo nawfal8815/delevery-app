@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LIVRAISON APP</title>
+</head>
+<body>
+    <div id="main">
+        <select id="langChange" name="lang">
+            <option value="ع">ع</option>
+            <option value="ENG">ENG</option>
+            <option value="FR">FR</option>
+        </select>
+        <img src="pics/logo1.png" alt="logo" id="logo">
+        <img id="bg-img" src="pics/bg.webp" alt="bg">
+        <h1 id="desc">توصيل السلع الخفيفة و طلبات الاكل و الدواء في جميع انحاء مدينة طنجة ابتداء من 10 دراهم</h1>
+        <button id="order"><h1 id="order-text">اطلب</h1></button>
+    </div>
+    <div id="pop-up">
+        <h1 id="back">&lt;&lt;</h1>
+        <div id="choice">
+            <button class="popup-buttons langChanger" id="goods-button">توصيل طلبية</button>
+            <button class="popup-buttons langChanger" id="command-button">توصيل سلعة</button>
+        </div>
+        <div id="command">
+            <form action="">
+                <label for="name"><span class="langChanger">الاسم الكامل</span><input type="name"></label>
+                <label for="name"><span class="langChanger">رقم الهاتف</span><input type="name"></label>
+                <label for="name"><span class="langChanger">وزن السلعة</span><input type="number" maxlength="50"></label>
+                <label for="name"><span class="langChanger">عنوان الاخد</span><textarea name="name" class="big-text"></textarea></label>
+                <label for="name"><span class="langChanger">عنوان التوصيل</span><textarea name="name" class="big-text"></textarea></label>
+                <button class="submit-buttons langChanger">تأكيد</button>
+            </form>
+        </div>
+        <div id="goods">
+            <form action="">
+                <label for="name"><span class="langChanger">الاسم الكامل</span><input type="name"></label>
+                <label for="name"><span class="langChanger">رقم الهاتف</span><input type="name"></label>
+                <label for="name"><span class="langChanger">الطلب</span><textarea name="name" class="big-text"></textarea></label>
+                <label for="name"><span class="langChanger">عنوان التوصيل</span><textarea name="name" class="big-text"></textarea></label>
+                <button class="submit-buttons langChanger">تأكيد</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCz5f6foih48kN2PerOMZWPdnoWuYcTicc",
+          authDomain: "delevery-app-9d760.firebaseapp.com",
+          projectId: "delevery-app-9d760",
+          storageBucket: "delevery-app-9d760.appspot.com",
+          messagingSenderId: "968142151355",
+          appId: "1:968142151355:web:a2e578ca4f6baff566d39e",
+          measurementId: "G-B8DF1B8743"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
